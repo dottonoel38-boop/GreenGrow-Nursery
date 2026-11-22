@@ -15,42 +15,115 @@ body {
 header {
   background: #14532d;
   color: white;
-  padding: 22px 15px;
+  padding: 18px 16px;
   text-align: center;
 }
-header h1 { margin: 0; font-size: 28px; }
-header p { margin-bottom: 0; }
-nav {
-  background: #fff;
-  padding: 15px;
-  text-align: center;
+header h1 { margin: 0; font-size: 26px; }
+header p { margin: 4px 0 0 0; font-size: 14px; }
+
+.top-bar {
+  background: #ffffff;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 6px #00000010;
+  box-shadow: 0 2px 6px #00000012;
 }
-nav a {
+.brand-name {
+  font-weight: bold;
   color: #14532d;
+  font-size: 15px;
   text-decoration: none;
-  margin: 0 12px;
+}
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+}
+.avatar-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2dd4bf, #3b82f6);
+  color: #ffffff;
   font-weight: bold;
   font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px #00000020;
 }
-nav a:hover {
-  color: #15803d;
-  text-decoration: underline;
+
+.search-drawer {
+  display: none;
+  background: #ffffff;
+  padding: 10px 18px 14px 18px;
+  border-bottom: 1px solid #e5e7eb;
 }
+.search-drawer.open {
+  display: block;
+}
+.search-drawer input {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.nav-menu {
+  display: none;
+  background: #ffffff;
+  padding: 12px 18px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+.nav-menu.open {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+.nav-menu a {
+  color: #14532d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.nav-menu a:hover {
+  background: #dcfce7;
+}
+
 .hero {
-  padding: 45px 20px;
+  padding: 40px 20px;
   background: #dcfce7;
 }
 .hero-header {
   text-align: center;
   max-width: 850px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 28px auto;
 }
 .hero-header h2 {
-  font-size: 30px;
+  font-size: 28px;
   color: #14532d;
   margin-bottom: 10px;
 }
@@ -60,8 +133,8 @@ nav a:hover {
 }
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -84,33 +157,33 @@ nav a:hover {
   display: inline-block;
   background: #15803d;
   color: white;
-  padding: 12px 22px;
+  padding: 11px 20px;
   border-radius: 7px;
   text-decoration: none;
-  margin-top: 14px;
+  margin-top: 12px;
   font-weight: bold;
 }
 .btn:hover {
   background: #14532d;
 }
 section {
-  padding: 35px 18px;
+  padding: 32px 18px;
   max-width: 1150px;
   margin: 0 auto;
 }
 h2 {
   text-align: center;
   color: #14532d;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
 }
 .card {
   background: white;
-  padding: 22px;
+  padding: 20px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 2px 9px #00000012;
@@ -124,7 +197,7 @@ h2 {
 }
 .contact-box {
   background: white;
-  padding: 30px 20px;
+  padding: 28px 20px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 2px 9px #00000012;
@@ -133,7 +206,7 @@ h2 {
   display: inline-block;
   background: #25D366;
   color: white;
-  padding: 15px 26px;
+  padding: 14px 26px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -143,8 +216,8 @@ footer {
   background: #14532d;
   color: white;
   text-align: center;
-  padding: 25px;
-  margin-top: 25px;
+  padding: 24px;
+  margin-top: 24px;
 }
 </style>
 </head>
@@ -155,110 +228,137 @@ footer {
 <p>Growing Today, Greening Tomorrow</p>
 </header>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
+<div class="top-bar">
+  <a href="#home" class="brand-name">GreenGrow</a>
+
+  <div class="top-controls">
+    <button type="button" class="icon-btn" aria-label="Search" onclick="toggleSearch()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
+
+    <a href="#home" class="avatar-badge" aria-label="Profile">D</a>
+
+    <button type="button" class="icon-btn" aria-label="Menu" onclick="toggleMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="search-drawer" id="searchDrawer">
+  <input type="text" id="searchInput" placeholder="Search products or services..." onkeyup="filterItems()">
+</div>
+
+<nav class="nav-menu" id="navMenu">
+  <a href="#home" onclick="closeMenu()">Home</a>
+  <a href="#products" onclick="closeMenu()">Products</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
 </nav>
 
 <div class="hero" id="home">
   <div class="hero-header">
     <h2>Welcome to GreenGrow Nursery</h2>
-    <p>Dedicated to supplying high-quality, healthy, and true-to-type seedlings while empowering farmers and landowners with practical horticultural solutions.</p>
+    <p>Supplying healthy, quality seedlings and practical horticultural solutions for farmers, gardens, and green spaces.</p>
     <a class="btn" href="#products">Explore Products</a>
   </div>
 
   <div class="info-grid">
     <div class="info-card">
-      <h3>Our Aims</h3>
-      <p>To bridge the gap between farmers and reliable planting materials, boost fruit and crop productivity, and promote sustainable green spaces.</p>
+      <h3>Aims</h3>
+      <p>To supply reliable planting materials, raise fruit and crop productivity, and promote sustainable greenery.</p>
     </div>
     <div class="info-card">
-      <h3>Our Functions</h3>
-      <p>Propagating healthy nursery seedlings, guiding growers on proper planting and care, supplying inputs/services, and supporting commercial and home gardens.</p>
+      <h3>Functions</h3>
+      <p>Propagating quality seedlings, advising growers on planting and care, and supporting farms and landscapes.</p>
     </div>
     <div class="info-card">
-      <h3>Our Foundations</h3>
-      <p>Built on horticultural science, strict seedling selection, soil and plant health care, honesty with growers, and long-term agricultural impact.</p>
+      <h3>Foundations</h3>
+      <p>Rooted in sound horticultural practices, healthy stock selection, grower trust, and long-term impact.</p>
     </div>
     <div class="info-card">
       <h3>Huge Plans</h3>
-      <p>Expanding mother-block propagation, scaling commercial fruit nurseries, introducing modern greenhouse and irrigation solutions, and training more growers.</p>
+      <p>Expanding mother blocks, scaling nursery output, introducing modern greenhouse systems, and empowering more growers.</p>
     </div>
   </div>
 </div>
 
 <section id="products">
-<h2>Our Products</h2>
+<h2>Products</h2>
 <div class="grid">
 
-  <div class="card">
-    <h3>Mango Seedlings</h3>
-    <p>Healthy and vigorous mango seedlings selected for strong orchard establishment and fruit production.</p>
-    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Mango%20Seedlings.">WhatsApp Order</a>
+  <div class="card searchable">
+    <h3>Mango</h3>
+    <p>Quality mango seedlings selected for healthy growth and fruit production.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Mango.">Order on WhatsApp</a>
   </div>
 
-  <div class="card">
-    <h3>Guava Seedlings</h3>
-    <p>Quality guava seedlings suitable for commercial orchards, small farms, and home gardens.</p>
-    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Guava%20Seedlings.">WhatsApp Order</a>
+  <div class="card searchable">
+    <h3>Guava</h3>
+    <p>Healthy guava seedlings suitable for commercial plots and home gardens.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Guava.">Order on WhatsApp</a>
   </div>
 
-  <div class="card">
-    <h3>Orange Seedlings</h3>
-    <p>Well-cared orange seedlings grown for reliable citrus production and garden planting.</p>
-    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Orange%20Seedlings.">WhatsApp Order</a>
+  <div class="card searchable">
+    <h3>Orange</h3>
+    <p>Well-cared orange seedlings grown for reliable citrus farming.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Orange.">Order on WhatsApp</a>
   </div>
 
-  <div class="card">
-    <h3>Loquat Seedlings</h3>
-    <p>Quality loquat seedlings suited for fruit growers seeking diverse and productive fruit trees.</p>
-    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Loquat%20Seedlings.">WhatsApp Order</a>
+  <div class="card searchable">
+    <h3>Loquat</h3>
+    <p>Quality loquat seedlings for fruit growers looking to diversify orchards.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Loquat.">Order on WhatsApp</a>
   </div>
 
-  <div class="card">
+  <div class="card searchable">
     <h3>Fruits</h3>
-    <p>Selected fruit varieties and fruit-bearing planting materials for farms and homesteads.</p>
-    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Fruits.">WhatsApp Order</a>
+    <p>Selected fruit varieties and fruit-bearing planting stock for farms and homes.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Fruits.">Order on WhatsApp</a>
   </div>
 
-  <div class="card">
+  <div class="card searchable">
     <h3>Other Seedlings</h3>
-    <p>Additional fruit, shade, timber, and horticultural seedlings available on request.</p>
-    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Other%20Seedlings.">WhatsApp Order</a>
+    <p>Additional fruit, shade, and crop seedlings available on request.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Other%20Seedlings.">Order on WhatsApp</a>
   </div>
 
 </div>
 </section>
 
 <section id="services">
-<h2>Our Services</h2>
+<h2>Services</h2>
 <div class="grid">
 
-  <div class="card">
-    <h3>Agricultural Extension &amp; Advice</h3>
-    <p>Practical agronomic guidance, crop management tips, and field advisory for farmers and growers.</p>
+  <div class="card searchable">
+    <h3>Agricultural Extension and Advice</h3>
+    <p>Practical agronomic guidance and field advisory for farmers and growers.</p>
   </div>
 
-  <div class="card">
+  <div class="card searchable">
     <h3>Landscape Design</h3>
-    <p>Thoughtful layout and beautification plans for compounds, institutions, gardens, and green spaces.</p>
+    <p>Layout and green space design for compounds, gardens, and institutions.</p>
   </div>
 
-  <div class="card">
+  <div class="card searchable">
     <h3>Seedling Service</h3>
-    <p>Reliable sourcing, hardening, and supply of quality seedlings tailored to your planting goals.</p>
+    <p>Supply and care of healthy seedlings tailored to your planting needs.</p>
   </div>
 
-  <div class="card">
+  <div class="card searchable">
     <h3>Greenhouse Installation</h3>
-    <p>Setup and structural guidance for controlled-environment growing to protect sensitive crops and nurseries.</p>
+    <p>Setup and guidance for controlled-environment structures and nurseries.</p>
   </div>
 
-  <div class="card">
+  <div class="card searchable">
     <h3>Fertilizer Application</h3>
-    <p>Proper nutrient feeding and fertilizer application practices to support healthy growth and yields.</p>
+    <p>Proper nutrient feeding and fertilizer application for strong crop growth.</p>
   </div>
 
 </div>
@@ -276,5 +376,17 @@ footer {
 <p>Growing Today, Greening Tomorrow</p>
 </footer>
 
-</body>
-</html>
+<script>
+function toggleSearch() {
+  var drawer = document.getElementById("searchDrawer");
+  var menu = document.getElementById("navMenu");
+  menu.classList.remove("open");
+  drawer.classList.toggle("open");
+  if (drawer.classList.contains("open")) {
+    document.getElementById("searchInput").focus();
+  }
+}
+
+function toggleMenu() {
+  var menu = document.getElementById("navMenu");
+  var drawer = document.
