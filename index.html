@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="sw">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GreenGrow Nursery | Quality Seedlings</title>
+<title>GreenGrow Nursery | Quality Seedlings & Agribusiness</title>
 <style>
-* { box-sizing: border-box; }
+* { box-sizing: border-box; scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -24,56 +24,134 @@ nav {
   background: #fff;
   padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px #00000010;
 }
 nav a {
   color: #14532d;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 12px;
   font-weight: bold;
+  font-size: 16px;
+}
+nav a:hover {
+  color: #15803d;
+  text-decoration: underline;
 }
 .hero {
-  padding: 65px 20px;
-  text-align: center;
+  padding: 45px 20px;
   background: #dcfce7;
 }
-.hero h2 { font-size: 30px; color: #14532d; }
-.hero p { line-height: 1.7; }
+.hero-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 30px auto;
+}
+.hero-header h2 {
+  font-size: 30px;
+  color: #14532d;
+  margin-bottom: 10px;
+}
+.hero-header p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.info-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 9px #00000012;
+  text-align: left;
+}
+.info-card h3 {
+  color: #166534;
+  margin-top: 0;
+}
+.info-card p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
 .btn {
   display: inline-block;
   background: #15803d;
   color: white;
-  padding: 13px 22px;
+  padding: 12px 22px;
   border-radius: 7px;
   text-decoration: none;
-  margin-top: 12px;
+  margin-top: 14px;
+  font-weight: bold;
 }
-section { padding: 30px 18px; }
-h2 { text-align: center; color: #14532d; }
-.products {
+.btn:hover {
+  background: #14532d;
+}
+section {
+  padding: 35px 18px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+h2 {
+  text-align: center;
+  color: #14532d;
+  margin-bottom: 22px;
+}
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 18px;
 }
-.product {
+.card {
   background: white;
   padding: 22px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 2px 9px #00000012;
 }
-.product h3 { color: #166534; }
+.card h3 {
+  color: #166534;
+  margin-top: 0;
+}
+.card p {
+  line-height: 1.6;
+}
+.contact-box {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 9px #00000012;
+}
+.wa-btn {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 15px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
 footer {
   background: #14532d;
   color: white;
   text-align: center;
   padding: 25px;
+  margin-top: 25px;
 }
 </style>
 </head>
 <body>
 
 <header>
-<h1>🌱 GreenGrow Nursery</h1>
+<h1>GreenGrow Nursery</h1>
 <p>Growing Today, Greening Tomorrow</p>
 </header>
 
@@ -85,432 +163,118 @@ footer {
 </nav>
 
 <div class="hero" id="home">
-<h2>Welcome to GreenGrow Nursery</h2>
-<p>Discover quality fruit seedlings, tree seedlings and crop seedlings for your farming needs.</p>
-<a class="btn" href="#products">Explore Products</a>
+  <div class="hero-header">
+    <h2>Welcome to GreenGrow Nursery</h2>
+    <p>Dedicated to supplying high-quality, healthy, and true-to-type seedlings while empowering farmers and landowners with practical horticultural solutions.</p>
+    <a class="btn" href="#products">Explore Products</a>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>Our Aims</h3>
+      <p>To bridge the gap between farmers and reliable planting materials, boost fruit and crop productivity, and promote sustainable green spaces.</p>
+    </div>
+    <div class="info-card">
+      <h3>Our Functions</h3>
+      <p>Propagating healthy nursery seedlings, guiding growers on proper planting and care, supplying inputs/services, and supporting commercial and home gardens.</p>
+    </div>
+    <div class="info-card">
+      <h3>Our Foundations</h3>
+      <p>Built on horticultural science, strict seedling selection, soil and plant health care, honesty with growers, and long-term agricultural impact.</p>
+    </div>
+    <div class="info-card">
+      <h3>Huge Plans</h3>
+      <p>Expanding mother-block propagation, scaling commercial fruit nurseries, introducing modern greenhouse and irrigation solutions, and training more growers.</p>
+    </div>
+  </div>
 </div>
 
 <section id="products">
 <h2>Our Products</h2>
+<div class="grid">
 
-<div class="products">
+  <div class="card">
+    <h3>Mango Seedlings</h3>
+    <p>Healthy and vigorous mango seedlings selected for strong orchard establishment and fruit production.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Mango%20Seedlings.">WhatsApp Order</a>
+  </div>
 
-<div class="product">
-<h3>Mango Seedlings</h3>
-<p>Quality mango seedlings for fruit production.</p>
-<h3>TSh 2,500</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Mango%20Seedlings.">ORDER NOW</a>
-</div>
+  <div class="card">
+    <h3>Guava Seedlings</h3>
+    <p>Quality guava seedlings suitable for commercial orchards, small farms, and home gardens.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Guava%20Seedlings.">WhatsApp Order</a>
+  </div>
 
-<div class="product">
-<h3>Avocado Seedlings</h3>
-<p>Healthy avocado seedlings for your farm.</p>
-<h3>TSh 2,500</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Avocado%20Seedlings.">ORDER NOW</a>
-</div>
+  <div class="card">
+    <h3>Orange Seedlings</h3>
+    <p>Well-cared orange seedlings grown for reliable citrus production and garden planting.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Orange%20Seedlings.">WhatsApp Order</a>
+  </div>
 
-<div class="product">
-<h3>Orange Seedlings</h3>
-<p>Quality orange seedlings for your garden and farm.</p>
-<h3>TSh 3,000</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Orange%20Seedlings.">ORDER NOW</a>
-</div>
+  <div class="card">
+    <h3>Loquat Seedlings</h3>
+    <p>Quality loquat seedlings suited for fruit growers seeking diverse and productive fruit trees.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Loquat%20Seedlings.">WhatsApp Order</a>
+  </div>
 
-<div class="product">
-<h3>Guava Seedlings</h3>
-<p>Quality guava seedlings for your garden.</p>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Guava%20Seedlings.">ORDER NOW</a>
-</div>
+  <div class="card">
+    <h3>Fruits</h3>
+    <p>Selected fruit varieties and fruit-bearing planting materials for farms and homesteads.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Fruits.">WhatsApp Order</a>
+  </div>
 
-<div class="product">
-<h3>Other Seedlings</h3>
-<p>Different fruit, tree and crop seedlings available.</p>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Other%20Seedlings.">ORDER NOW</a>
-</div>
+  <div class="card">
+    <h3>Other Seedlings</h3>
+    <p>Additional fruit, shade, timber, and horticultural seedlings available on request.</p>
+    <a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Other%20Seedlings.">WhatsApp Order</a>
+  </div>
 
 </div>
 </section>
 
 <section id="services">
 <h2>Our Services</h2>
-<div class="product">
-<h3>🌳 Landscaping Services</h3>
-<p>Professional landscaping and garden design services.</p>
-<h3>🚚 Seedling Delivery</h3>
-<p>We accept orders and arrange delivery.</p>
+<div class="grid">
+
+  <div class="card">
+    <h3>Agricultural Extension &amp; Advice</h3>
+    <p>Practical agronomic guidance, crop management tips, and field advisory for farmers and growers.</p>
+  </div>
+
+  <div class="card">
+    <h3>Landscape Design</h3>
+    <p>Thoughtful layout and beautification plans for compounds, institutions, gardens, and green spaces.</p>
+  </div>
+
+  <div class="card">
+    <h3>Seedling Service</h3>
+    <p>Reliable sourcing, hardening, and supply of quality seedlings tailored to your planting goals.</p>
+  </div>
+
+  <div class="card">
+    <h3>Greenhouse Installation</h3>
+    <p>Setup and structural guidance for controlled-environment growing to protect sensitive crops and nurseries.</p>
+  </div>
+
+  <div class="card">
+    <h3>Fertilizer Application</h3>
+    <p>Proper nutrient feeding and fertilizer application practices to support healthy growth and yields.</p>
+  </div>
+
 </div>
 </section>
 
 <section id="contact">
-<h2>Contact GreenGrow Nursery</h2>
-<p style="text-align:center">
-Contact us for orders, prices and consultations.
-</p>
-<p style="text-align:center">
-WhatsApp: <a href="https://wa.me/255719284702" style="color:#15803d;font-weight:bold;text-decoration:none;">0719 284 702</a>
-</p>
-<p style="text-align:center">
-Email: dottonoel38@gmail.com
-</p>
+<h2>Contact</h2>
+<div class="contact-box">
+  <a class="wa-btn" href="https://wa.me/255719284702" target="_blank">WhatsApp: 0719 284 702</a>
+</div>
 </section>
 
 <footer>
 <p>© 2026 GreenGrow Nursery</p>
-<p>Growing Today, Greening Tomorrow 🌱</p>
-</footer>
-
-<a href="https://wa.me/255719284702"
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;
-   background:#25D366;color:white;padding:15px 20px;
-   border-radius:30px;text-decoration:none;
-   font-weight:bold;z-index:9999;">
-   Contact Us on WhatsApp
-</a>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="sw">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GreenGrow Nursery | Quality Seedlings</title>
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f8f3;
-  color: #263528;
-}
-header {
-  background: #14532d;
-  color: white;
-  padding: 22px 15px;
-  text-align: center;
-}
-header h1 { margin: 0; font-size: 28px; }
-header p { margin-bottom: 0; }
-nav {
-  background: #fff;
-  padding: 15px;
-  text-align: center;
-}
-nav a {
-  color: #14532d;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-.hero {
-  padding: 65px 20px;
-  text-align: center;
-  background: #dcfce7;
-}
-.hero h2 { font-size: 30px; color: #14532d; }
-.hero p { line-height: 1.7; }
-.btn {
-  display: inline-block;
-  background: #15803d;
-  color: white;
-  padding: 13px 22px;
-  border-radius: 7px;
-  text-decoration: none;
-  margin-top: 12px;
-}
-section { padding: 30px 18px; }
-h2 { text-align: center; color: #14532d; }
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-.product {
-  background: white;
-  padding: 22px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 9px #00000012;
-}
-.product h3 { color: #166534; }
-footer {
-  background: #14532d;
-  color: white;
-  text-align: center;
-  padding: 25px;
-}
-</style>
-</head>
-<body>
-
-<header>
-<h1>🌱 GreenGrow Nursery</h1>
 <p>Growing Today, Greening Tomorrow</p>
-</header>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="hero" id="home">
-<h2>Welcome to GreenGrow Nursery</h2>
-<p>Discover quality fruit seedlings, tree seedlings and crop seedlings for your farming needs.</p>
-<a class="btn" href="#products">Explore Products</a>
-</div>
-
-<section id="products">
-<h2>Our Products</h2>
-
-<div class="products">
-
-<div class="product">
-<h3>Mango Seedlings</h3>
-<p>Quality mango seedlings for fruit production.</p>
-<h3>TSh 2,500</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Mango%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Avocado Seedlings</h3>
-<p>Healthy avocado seedlings for your farm.</p>
-<h3>TSh 2,500</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Avocado%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Orange Seedlings</h3>
-<p>Quality orange seedlings for your garden and farm.</p>
-<h3>TSh 3,000</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Orange%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Guava Seedlings</h3>
-<p>Quality guava seedlings for your garden.</p>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Guava%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Other Seedlings</h3>
-<p>Different fruit, tree and crop seedlings available.</p>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Other%20Seedlings.">ORDER NOW</a>
-</div>
-
-</div>
-</section>
-
-<section id="services">
-<h2>Our Services</h2>
-<div class="product">
-<h3>🌳 Landscaping Services</h3>
-<p>Professional landscaping and garden design services.</p>
-<h3>🚚 Seedling Delivery</h3>
-<p>We accept orders and arrange delivery.</p>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact GreenGrow Nursery</h2>
-<p style="text-align:center">
-Contact us for orders, prices and consultations.
-</p>
-<p style="text-align:center">
-WhatsApp: <a href="https://wa.me/255719284702" style="color:#15803d;font-weight:bold;text-decoration:none;">0719 284 702</a>
-</p>
-<p style="text-align:center">
-Email: dottonoel38@gmail.com
-</p>
-</section>
-
-<footer>
-<p>© 2026 GreenGrow Nursery</p>
-<p>Growing Today, Greening Tomorrow 🌱</p>
 </footer>
-
-<a href="https://wa.me/255719284702"
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;
-   background:#25D366;color:white;padding:15px 20px;
-   border-radius:30px;text-decoration:none;
-   font-weight:bold;z-index:9999;">
-   Contact Us on WhatsApp
-</a>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="sw">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GreenGrow Nursery | Quality Seedlings</title>
-<style>
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f8f3;
-  color: #263528;
-}
-header {
-  background: #14532d;
-  color: white;
-  padding: 22px 15px;
-  text-align: center;
-}
-header h1 { margin: 0; font-size: 28px; }
-header p { margin-bottom: 0; }
-nav {
-  background: #fff;
-  padding: 15px;
-  text-align: center;
-}
-nav a {
-  color: #14532d;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-.hero {
-  padding: 65px 20px;
-  text-align: center;
-  background: #dcfce7;
-}
-.hero h2 { font-size: 30px; color: #14532d; }
-.hero p { line-height: 1.7; }
-.btn {
-  display: inline-block;
-  background: #15803d;
-  color: white;
-  padding: 13px 22px;
-  border-radius: 7px;
-  text-decoration: none;
-  margin-top: 12px;
-}
-section { padding: 30px 18px; }
-h2 { text-align: center; color: #14532d; }
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-.product {
-  background: white;
-  padding: 22px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 2px 9px #00000012;
-}
-.product h3 { color: #166534; }
-footer {
-  background: #14532d;
-  color: white;
-  text-align: center;
-  padding: 25px;
-}
-</style>
-</head>
-<body>
-
-<header>
-<h1>🌱 GreenGrow Nursery</h1>
-<p>Growing Today, Greening Tomorrow</p>
-</header>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="hero" id="home">
-<h2>Welcome to GreenGrow Nursery</h2>
-<p>Discover quality fruit seedlings, tree seedlings and crop seedlings for your farming needs.</p>
-<a class="btn" href="#products">Explore Products</a>
-</div>
-
-<section id="products">
-<h2>Our Products</h2>
-
-<div class="products">
-
-<div class="product">
-<h3>Mango Seedlings</h3>
-<p>Quality mango seedlings for fruit production.</p>
-<h3>TSh 2,500</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Mango%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Avocado Seedlings</h3>
-<p>Healthy avocado seedlings for your farm.</p>
-<h3>TSh 2,500</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Avocado%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Orange Seedlings</h3>
-<p>Quality orange seedlings for your garden and farm.</p>
-<h3>TSh 3,000</h3>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Orange%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Guava Seedlings</h3>
-<p>Quality guava seedlings for your garden.</p>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20order%20Guava%20Seedlings.">ORDER NOW</a>
-</div>
-
-<div class="product">
-<h3>Other Seedlings</h3>
-<p>Different fruit, tree and crop seedlings available.</p>
-<a class="btn" href="https://wa.me/255719284702?text=Hello%20GreenGrow%20Nursery%2C%20I%20want%20to%20inquire%20about%20Other%20Seedlings.">ORDER NOW</a>
-</div>
-
-</div>
-</section>
-
-<section id="services">
-<h2>Our Services</h2>
-<div class="product">
-<h3>🌳 Landscaping Services</h3>
-<p>Professional landscaping and garden design services.</p>
-<h3>🚚 Seedling Delivery</h3>
-<p>We accept orders and arrange delivery.</p>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact GreenGrow Nursery</h2>
-<p style="text-align:center">
-Contact us for orders, prices and consultations.
-</p>
-<p style="text-align:center">
-WhatsApp: <a href="https://wa.me/255719284702" style="color:#15803d;font-weight:bold;text-decoration:none;">0719 284 702</a>
-</p>
-<p style="text-align:center">
-Email: dottonoel38@gmail.com
-</p>
-</section>
-
-<footer>
-<p>© 2026 GreenGrow Nursery</p>
-<p>Growing Today, Greening Tomorrow 🌱</p>
-</footer>
-
-<a href="https://wa.me/255719284702"
-   target="_blank"
-   style="position:fixed;bottom:20px;right:20px;
-   background:#25D366;color:white;padding:15px 20px;
-   border-radius:30px;text-decoration:none;
-   font-weight:bold;z-index:9999;">
-   Contact Us on WhatsApp
-</a>
 
 </body>
 </html>
